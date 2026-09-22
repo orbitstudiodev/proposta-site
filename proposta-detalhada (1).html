@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orbit Studio: Proposta Comercial Detalhada</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --preto: #18151f;
+    --preto-2: #26212f;
+    --lilas: #7a629c;
+    --lilas-escuro: #4a3a63;
+    --lilas-claro: #ece6f4;
+    --branco: #ffffff;
+    --creme: #fbfaf9;
+    --linha: #e6e1eb;
+    --texto: #1e1b24;
+    --texto-suave: #625c6e;
+    --texto-fraco: #96909f;
+    --sem-cor: #8b6a4f;
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+
+  body{
+    font-family:'Inter', Arial, sans-serif;
+    color: var(--texto);
+    background: var(--creme);
+    line-height: 1.6;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection{ background: var(--lilas-claro); }
+  a{ color: inherit; }
+
+  .wrap{
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ===== TOPO ===== */
+  .topbar{
+    background: var(--preto);
+    color: #f1eef5;
+    padding: 16px 0;
+  }
+  .topbar .wrap{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .topbar-brand{
+    font-family:'Fraunces', serif;
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: 0.01em;
+    display:flex;
+    align-items:center;
+    gap:9px;
+  }
+  .topbar-brand .dot{
+    width:7px; height:7px;
+    border-radius:50%;
+    background: var(--lilas);
+    display:inline-block;
+  }
+  .topbar-meta{
+    font-size: 12px;
+    color: #b3adc0;
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    padding: 76px 0 64px;
+    border-bottom: 1px solid var(--linha);
+  }
+  .hero-eyebrow{
+    font-size: 13px;
+    color: var(--lilas);
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  .hero h1{
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 1.14;
+    color: var(--preto);
+    max-width: 640px;
+    letter-spacing: -0.01em;
+  }
+  .hero h1 em{
+    font-style: italic;
+    font-weight: 500;
+    color: var(--lilas);
+  }
+  .hero-sub{
+    margin-top: 22px;
+    font-size: 16.5px;
+    color: var(--texto-suave);
+    max-width: 580px;
+    line-height: 1.65;
+  }
+  /* ===== SEÇÃO GENÉRICA ===== */
+  section{ padding: 62px 0; }
+  section.tight{ padding: 46px 0; }
+  .section-eyebrow{
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--lilas);
+    margin-bottom: 8px;
+  }
+  h2.section-title{
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 27px;
+    color: var(--preto);
+    letter-spacing: -0.01em;
+  }
+  .section-desc{
+    color: var(--texto-suave);
+    font-size: 14.5px;
+    max-width: 560px;
+    margin-top: 10px;
+  }
+
+  /* ===== O PROBLEMA (comparação) ===== */
+  .problema{
+    background: var(--branco);
+    border-top: 1px solid var(--linha);
+    border-bottom: 1px solid var(--linha);
+  }
+  .comparo{
+    margin-top: 30px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .comparo-card{
+    border-radius: 10px;
+    padding: 24px 26px;
+    border: 1px solid var(--linha);
+  }
+  .comparo-card.sem{
+    background: var(--creme);
+  }
+  .comparo-card.com{
+    background: var(--preto);
+    color: #f1eef5;
+    border-color: var(--preto);
+  }
+  .comparo-titulo{
+    font-size: 12.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 16px;
+  }
+  .comparo-card.sem .comparo-titulo{ color: var(--sem-cor); }
+  .comparo-card.com .comparo-titulo{ color: var(--lilas); }
+  .comparo-lista{ list-style:none; }
+  .comparo-lista li{
+    display:flex;
+    gap: 10px;
+    padding: 8px 0;
+    font-size: 13.3px;
+    align-items:flex-start;
+  }
+  .comparo-card.sem .comparo-lista li{ color: var(--texto-suave); }
+  .comparo-card.com .comparo-lista li{ color: #d3cee0; }
+  .marca{ flex-shrink:0; font-weight:700; width:14px; }
+  .comparo-card.sem .marca{ color: var(--sem-cor); }
+  .comparo-card.com .marca{ color: var(--lilas); }
+
+  /* ===== COMO FUNCIONA ===== */
+  .passos{
+    margin-top: 30px;
+  }
+  .passo{
+    display:grid;
+    grid-template-columns: 40px 1fr;
+    gap: 18px;
+    padding: 18px 0;
+    border-top: 1px solid var(--linha);
+  }
+  .passo:last-child{ border-bottom: 1px solid var(--linha); }
+  .passo-num{
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--lilas);
+  }
+  .passo-corpo h3{
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--texto);
+    margin-bottom: 4px;
+  }
+  .passo-corpo p{
+    font-size: 13px;
+    color: var(--texto-suave);
+    line-height: 1.55;
+    max-width: 460px;
+  }
+
+  /* ===== INVESTIMENTO ===== */
+  .plano{
+    background: var(--preto);
+    border-radius: 14px;
+    padding: 38px 40px;
+    color: #f1eef5;
+    margin-top: 30px;
+  }
+  .plano-tag{
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--lilas);
+    text-transform: uppercase;
+  }
+  .plano-nome{
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 25px;
+    margin-top: 8px;
+  }
+  .plano-tagline{
+    font-size: 13.5px;
+    color: #b3adc0;
+    margin-top: 6px;
+    max-width: 440px;
+  }
+
+  .precos{
+    margin-top: 30px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .preco-card{
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    padding: 20px 22px;
+  }
+  .preco-label{
+    font-size: 12px;
+    color: #beb8ca;
+    margin-bottom: 8px;
+  }
+  .preco-valor{
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .preco-valor small{
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #beb8ca;
+  }
+  .preco-nota{
+    font-size: 11.8px;
+    color: #a49ead;
+    margin-top: 8px;
+    line-height: 1.5;
+  }
+
+  /* ===== FEATURES ===== */
+  .features-grid{
+    margin-top: 32px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 40px;
+  }
+  .feature-bloco h3{
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--lilas-escuro);
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--linha);
+  }
+  .flist{ list-style:none; }
+  .flist li{
+    display:flex;
+    gap: 11px;
+    padding: 9px 0;
+    align-items:flex-start;
+  }
+  .fcheck{
+    width: 16px; height: 16px;
+    color: var(--lilas);
+    flex-shrink:0;
+    font-size: 13px;
+    font-weight: 800;
+    margin-top: 2px;
+  }
+  .ftext strong{ font-size: 13.6px; font-weight: 600; color: var(--texto); }
+  .fdesc{ font-size: 12.3px; color: var(--texto-suave); margin-top: 2px; line-height: 1.5; }
+
+  /* ===== DIFERENCIAIS ===== */
+  .diferenciais{
+    background: var(--branco);
+    border-top: 1px solid var(--linha);
+    border-bottom: 1px solid var(--linha);
+  }
+  .dif-grid{
+    margin-top: 30px;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .dif-card{
+    padding-left: 18px;
+    border-left: 2px solid var(--lilas);
+  }
+  .dif-card h3{ font-size: 14px; font-weight: 700; margin-bottom: 6px; color: var(--texto); }
+  .dif-card p{ font-size: 12.6px; color: var(--texto-suave); line-height: 1.55; }
+
+  /* ===== PAGAMENTO ===== */
+  .pagamento-grid{
+    margin-top: 28px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .pg-card{
+    border: 1px solid var(--linha);
+    border-radius: 10px;
+    padding: 20px 22px;
+    background: var(--branco);
+  }
+  .pg-card h4{
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--preto);
+    margin-bottom: 8px;
+  }
+  .pg-card p{ font-size: 13px; color: var(--texto-suave); }
+  .pg-card .destaque{ color: var(--lilas-escuro); font-weight: 700; }
+
+  .aviso{
+    margin-top: 20px;
+    background: var(--lilas-claro);
+    border: 1px solid #d9cee9;
+    border-radius: 10px;
+    padding: 16px 20px;
+    font-size: 13px;
+    color: #3d3050;
+    display:flex;
+    gap: 12px;
+  }
+  .aviso .icon{ font-size: 15px; flex-shrink:0; color: var(--lilas-escuro); }
+  .aviso strong{ color: var(--preto); }
+
+  /* ===== FAQ ===== */
+  .faq-item{
+    border-bottom: 1px solid var(--linha);
+    padding: 20px 0;
+  }
+  .faq-item:first-child{ border-top: 1px solid var(--linha); margin-top: 30px; }
+  .faq-q{
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--preto);
+    margin-bottom: 8px;
+    display:flex;
+    gap: 10px;
+  }
+  .faq-q .qmark{
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--lilas);
+    flex-shrink: 0;
+  }
+  .faq-a{
+    font-size: 13.4px;
+    color: var(--texto-suave);
+    padding-left: 24px;
+    line-height: 1.6;
+  }
+
+  /* ===== CTA FINAL ===== */
+  .cta-final{
+    text-align:center;
+    padding: 70px 0 30px;
+  }
+  .cta-final h2{
+    font-family:'Fraunces', serif;
+    font-weight: 600;
+    font-size: 26px;
+    color: var(--preto);
+    max-width: 480px;
+    margin: 0 auto 12px;
+  }
+  .cta-final p{
+    color: var(--texto-suave);
+    font-size: 14px;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+  .validade{
+    margin-top: 26px;
+    font-size: 12px;
+    color: var(--texto-fraco);
+  }
+
+  footer{
+    border-top: 1px solid var(--linha);
+    padding: 26px 0 40px;
+    text-align:center;
+    font-size: 11.5px;
+    color: var(--texto-fraco);
+  }
+
+  /* ===== PRINT ===== */
+  @media print{
+    .topbar{ -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .plano{ -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .comparo-card.com{ -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    section{ padding: 34px 0; }
+  }
+
+  /* ===== RESPONSIVO ===== */
+  @media (max-width: 720px){
+    .wrap{ padding: 0 20px; }
+    .hero{ padding: 52px 0 44px; }
+    .hero h1{ font-size: 30px; }
+    .comparo{ grid-template-columns: 1fr; }
+    .precos{ grid-template-columns: 1fr; }
+    .features-grid{ grid-template-columns: 1fr; gap: 26px; }
+    .pagamento-grid{ grid-template-columns: 1fr; }
+    .dif-grid{ grid-template-columns: 1fr; gap: 20px; }
+    .plano{ padding: 28px 22px; }
+    .topbar .wrap{ flex-direction:column; align-items:flex-start; gap:4px; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="wrap">
+      <div class="topbar-brand"><span class="dot"></span>Orbit Studio</div>
+      <div class="topbar-meta">Proposta comercial detalhada. Plano Completo</div>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-eyebrow">Sites com chat de atendimento via inteligência artificial</div>
+      <h1>Enquanto sua clínica dorme, seu site continua <em>conversando com pacientes</em>.</h1>
+      <p class="hero-sub">
+        A Orbit Studio desenvolve sites profissionais para clínicas e consultórios, com
+        atendimento automatizado por inteligência artificial diretamente na página. O
+        objetivo é simples: transformar visitantes em pacientes, respondendo dúvidas e
+        captando agendamentos a qualquer hora, com uma presença digital confiável,
+        moderna e sempre disponível.
+      </p>
+    </div>
+  </div>
+
+  <section class="problema tight">
+    <div class="wrap">
+      <div class="section-eyebrow">O cenário atual</div>
+      <h2 class="section-title">Quanto contato sua clínica perde fora do horário?</h2>
+      <p class="section-desc">A maior parte das buscas por uma clínica acontece à noite, no fim de semana ou entre um compromisso e outro, justamente quando ninguém está lá para responder.</p>
+
+      <div class="comparo">
+        <div class="comparo-card sem">
+          <div class="comparo-titulo">Sem site com IA</div>
+          <ul class="comparo-lista">
+            <li><span class="marca">–</span>Paciente manda mensagem às 22h e só recebe resposta no dia seguinte, se lembrar</li>
+            <li><span class="marca">–</span>Dúvidas simples de procedimento e valores geram idas e vindas antes do agendamento</li>
+            <li><span class="marca">–</span>Redes sociais e Google mostram uma presença desatualizada ou inexistente</li>
+            <li><span class="marca">–</span>Secretária sobrecarregada com perguntas repetitivas durante o expediente</li>
+          </ul>
+        </div>
+        <div class="comparo-card com">
+          <div class="comparo-titulo">Com Orbit Studio</div>
+          <ul class="comparo-lista">
+            <li><span class="marca">✓</span>Chat responde na hora, qualquer dia, qualquer horário</li>
+            <li><span class="marca">✓</span>Dúvidas frequentes são resolvidas automaticamente pela IA</li>
+            <li><span class="marca">✓</span>Site profissional reforça a credibilidade da clínica desde o primeiro clique</li>
+            <li><span class="marca">✓</span>Equipe recebe só os contatos já qualificados, prontos para confirmar</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap">
+      <div class="section-eyebrow">Como funciona</div>
+      <h2 class="section-title">Da primeira visita ao agendamento confirmado</h2>
+      <div class="passos">
+        <div class="passo">
+          <div class="passo-num">01</div>
+          <div class="passo-corpo">
+            <h3>Paciente encontra o site</h3>
+            <p>Via Google, redes sociais, indicação ou anúncio.</p>
+          </div>
+        </div>
+        <div class="passo">
+          <div class="passo-num">02</div>
+          <div class="passo-corpo">
+            <h3>O chat inicia a conversa</h3>
+            <p>Assim que o visitante entra, a IA se apresenta e se coloca à disposição.</p>
+          </div>
+        </div>
+        <div class="passo">
+          <div class="passo-num">03</div>
+          <div class="passo-corpo">
+            <h3>Dúvidas são respondidas</h3>
+            <p>Procedimentos, valores, horários e diferenciais da clínica, com base no contexto configurado.</p>
+          </div>
+        </div>
+        <div class="passo">
+          <div class="passo-num">04</div>
+          <div class="passo-corpo">
+            <h3>Interesse é direcionado</h3>
+            <p>O contato qualificado chega até você, pronto para a confirmação do agendamento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-eyebrow">Investimento</div>
+      <h2 class="section-title">Plano Completo</h2>
+      <p class="section-desc">Site personalizado, chat de atendimento com IA e gestão contínua, tudo incluso, sem taxas escondidas.</p>
+
+      <div class="plano">
+        <div class="plano-tag">Plano Completo</div>
+        <div class="plano-nome">Site + Chat de IA + Gestão contínua</div>
+        <div class="plano-tagline">Uma solução completa para transformar visitantes em pacientes.</div>
+
+        <div class="precos">
+          <div class="preco-card">
+            <div class="preco-label">Setup (implantação)</div>
+            <div class="preco-valor">R$ 1.400<small>,00</small></div>
+            <div class="preco-nota">Pagamento único. Cobre todo o desenvolvimento e configuração inicial.</div>
+          </div>
+          <div class="preco-card">
+            <div class="preco-label">Mensalidade</div>
+            <div class="preco-valor">R$ 400<small>,00 /mês</small></div>
+            <div class="preco-nota">Cobrança recorrente. Mantém o site, o chat e o suporte sempre ativos.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap">
+      <div class="section-eyebrow">O que está incluso</div>
+      <h2 class="section-title">Setup e mensalidade, em detalhe</h2>
+
+      <div class="features-grid">
+        <div class="feature-bloco">
+          <h3>Incluso no setup</h3>
+          <ul class="flist">
+            <li>
+              <span class="fcheck">✓</span>
+              <div class="ftext">
+                <strong>Site profissional personalizado</strong>
+                <div class="fdesc">Desenvolvido com base na identidade visual e no tom de comunicação da clínica, não um modelo genérico.</div>
+              </div>
+            </li>
+            <li>
+              <span class="fcheck">✓</span>
+              <div class="ftext">
+                <strong>Design responsivo e mobile-first</strong>
+                <div class="fdesc">Otimizado para a experiência no celular, já que é onde a maioria dos pacientes acessa o link.</div>
+              </div>
+            </li>
+            <li>
+              <span class="fcheck">✓</span>
+              <div class="ftext">
+                <strong>Configuração do chat de atendimento com IA</strong>
+                <div class="fdesc">Implementação e ajuste inicial do assistente virtual integrado ao site.</div>
+              </div>
+            </li>
+            <li>
+              <span class="fcheck">✓</span>
+              <div class="ftext">
+                <strong>Configuração de domínio próprio</strong>
+                <div class="fdesc">Por exemplo, suaclinica.com.br: endereço profissional em nome da própria clínica.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="feature-bloco">
+          <h3>Incluso na mensalidade</h3>
+          <ul class="flist">
+            <li>
+              <span class="fcheck">✓</span>
+              <div class="ftext">
+                <strong>Chat de IA ativo 24 horas por dia</strong>
+                <div class="fdesc">Responde dúvidas e capta interesse em agendamento mesmo fora do horário de expediente.</div>
+              </div>
+            </li>
+            <li>
+              <span class="fcheck">✓</span>
+              <div class="ftext">
+                <strong>Hospedagem inclusa</strong>
+                <div class="fdesc">O site permanece no ar, com infraestrutura e domínio mantidos pela Orbit Studio.</div>
+              </div>
+            </li>
+            <li>
+              <span class="fcheck">✓</span>
+              <div class="ftext">
+                <strong>Ajustes e manutenção do site</strong>
+                <div class="fdesc">Pequenas edições de texto, foto ou informação sob demanda, sem custo adicional por solicitação.</div>
+              </div>
+            </li>
+            <li>
+              <span class="fcheck">✓</span>
+              <div class="ftext">
+                <strong>Suporte direto com a equipe Orbit Studio</strong>
+                <div class="fdesc">Canal direto para dúvidas, ajustes ou qualquer necessidade relacionada ao site.</div>
+              </div>
+            </li>
+            <li>
+              <span class="fcheck">✓</span>
+              <div class="ftext">
+                <strong>Relatório mensal de visitas</strong>
+                <div class="fdesc">Via Google Analytics: quantas pessoas visitaram o site, de onde vieram e o que mais acessaram.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="diferenciais">
+    <div class="wrap">
+      <div class="section-eyebrow">Por que Orbit Studio</div>
+      <h2 class="section-title">Feito para clínicas, não um site genérico</h2>
+      <div class="dif-grid">
+        <div class="dif-card">
+          <h3>Atendimento nunca para</h3>
+          <p>A maioria dos contatos de pacientes acontece fora do horário comercial. O chat de IA garante que ninguém fique sem resposta.</p>
+        </div>
+        <div class="dif-card">
+          <h3>Sem letras miúdas</h3>
+          <p>Ajustes, suporte e hospedagem já estão na mensalidade. Nada de cobrança extra por pequenas alterações no site.</p>
+        </div>
+        <div class="dif-card">
+          <h3>Presença profissional</h3>
+          <p>Domínio próprio, design pensado para celular e identidade visual da clínica: a primeira impressão que gera confiança.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap">
+      <div class="section-eyebrow">Condições de pagamento</div>
+      <h2 class="section-title">Formas de pagamento</h2>
+
+      <div class="pagamento-grid">
+        <div class="pg-card">
+          <h4>Setup</h4>
+          <p>Em até 12x sem juros no cartão, ou <span class="destaque">10% de desconto</span> pagando à vista via Pix.</p>
+        </div>
+        <div class="pg-card">
+          <h4>Mensalidade</h4>
+          <p>Cobrança recorrente mensal, com pagamento via Pix. Vencimento combinado conforme a data de aprovação do site.</p>
+        </div>
+      </div>
+
+      <div class="aviso">
+        <span class="icon">ⓘ</span>
+        <div><strong>Importante:</strong> o início do desenvolvimento está condicionado à assinatura do contrato e ao pagamento do sinal (50% do valor do setup) ou ao pagamento integral via cartão.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap">
+      <div class="section-eyebrow">Dúvidas frequentes</div>
+      <h2 class="section-title">Perguntas que costumam surgir</h2>
+
+      <div class="faq-item">
+        <div class="faq-q"><span class="qmark">?</span>Quanto tempo leva para o site ficar pronto?</div>
+        <div class="faq-a">O prazo varia conforme a complexidade e a agilidade no envio de conteúdos e imagens da clínica, e é combinado logo após a assinatura do contrato.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="qmark">?</span>O chat de IA substitui a secretária?</div>
+        <div class="faq-a">Não. Ele atua como primeira linha de atendimento, respondendo dúvidas e captando interesse. A confirmação final do agendamento continua sendo feita pela sua equipe.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="qmark">?</span>Posso pedir alterações no site depois de pronto?</div>
+        <div class="faq-a">Sim. Pequenos ajustes de texto, foto ou informação estão inclusos na mensalidade, sem custo adicional por solicitação.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="qmark">?</span>O que acontece se eu cancelar a mensalidade?</div>
+        <div class="faq-a">O site e o chat de IA deixam de ficar ativos, já que a mensalidade cobre hospedagem, domínio e o funcionamento contínuo do atendimento.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-final">
+    <div class="wrap">
+      <h2>Pronto para transformar visitantes em pacientes?</h2>
+      <p>Responda esta mensagem para seguirmos com os próximos passos e darmos início ao seu projeto.</p>
+      <div class="validade">Proposta válida por 7 dias a partir da data de envio.</div>
+    </div>
+  </div>
+
+  <footer>
+    Orbit Studio. Sites com Chat de Atendimento via IA para Clínicas
+  </footer>
+
+</body>
+</html>
