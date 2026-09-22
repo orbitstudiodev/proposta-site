@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
 <title>Orbit Studio: Proposta Comercial Detalhada</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -107,6 +108,29 @@
     max-width: 580px;
     line-height: 1.65;
   }
+  .hero-for{
+    margin-top: 30px;
+    display:inline-flex;
+    align-items:center;
+    gap: 10px;
+    background: var(--branco);
+    border: 1px solid var(--linha);
+    border-radius: 30px;
+    padding: 9px 18px 9px 8px;
+    font-size: 13px;
+    color: var(--texto-suave);
+  }
+  .hero-for .avatar{
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: var(--preto);
+    display:flex; align-items:center; justify-content:center;
+    color: #f1eef5;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .hero-for strong{ color: var(--texto); font-weight: 600; }
+
   /* ===== SEÇÃO GENÉRICA ===== */
   section{ padding: 62px 0; }
   section.tight{ padding: 46px 0; }
@@ -271,6 +295,40 @@
     margin-top: 8px;
     line-height: 1.5;
   }
+
+  .promo-tag{
+    display:inline-block;
+    margin-top: 18px;
+    background: var(--lilas);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    padding: 6px 14px;
+    border-radius: 20px;
+  }
+  .preco-antigo{
+    font-size: 13px;
+    color: #a49ead;
+    margin-bottom: 2px;
+  }
+  .preco-antigo s{ text-decoration-thickness: 1.5px; }
+  .preco-parcela{
+    font-size: 12.5px;
+    color: #d3cee0;
+    margin-top: 8px;
+    font-weight: 600;
+  }
+  .retorno{
+    margin-top: 22px;
+    font-size: 13.5px;
+    color: #d3cee0;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding-top: 18px;
+    max-width: 560px;
+    line-height: 1.6;
+  }
+  .retorno strong{ color: #fff; }
 
   /* ===== FEATURES ===== */
   .features-grid{
@@ -549,6 +607,7 @@
           <div class="preco-card">
             <div class="preco-label">Setup (implantação)</div>
             <div class="preco-valor">R$ 1.400<small>,00</small></div>
+            <div class="preco-parcela">ou 10x de R$ 140,00 sem juros</div>
             <div class="preco-nota">Pagamento único. Cobre todo o desenvolvimento e configuração inicial.</div>
           </div>
           <div class="preco-card">
@@ -556,6 +615,10 @@
             <div class="preco-valor">R$ 400<small>,00 /mês</small></div>
             <div class="preco-nota">Cobrança recorrente. Mantém o site, o chat e o suporte sempre ativos.</div>
           </div>
+        </div>
+
+        <div class="retorno">
+          <strong>Faz a conta:</strong> em uma clínica, um único paciente novo por mês já paga a mensalidade. O chat trabalha o dia todo, inclusive à noite e nos fins de semana, quando ninguém está lá para responder.
         </div>
       </div>
     </div>
@@ -674,11 +737,11 @@
       <div class="pagamento-grid">
         <div class="pg-card">
           <h4>Setup</h4>
-          <p>Em até 12x sem juros no cartão, ou <span class="destaque">10% de desconto</span> pagando à vista via Pix.</p>
+          <p>Em até 10x sem juros no cartão, ou <span class="destaque">10% de desconto</span> pagando à vista via Pix.</p>
         </div>
         <div class="pg-card">
           <h4>Mensalidade</h4>
-          <p>Cobrança recorrente mensal, com pagamento via Pix. Vencimento combinado conforme a data de aprovação do site.</p>
+          <p>Cobrança recorrente mensal, podendo ser paga via Pix. Vencimento combinado conforme a data de aprovação do site.</p>
         </div>
       </div>
 
@@ -716,7 +779,7 @@
   <div class="cta-final">
     <div class="wrap">
       <h2>Pronto para transformar visitantes em pacientes?</h2>
-      <p>Responda esta mensagem para seguirmos com os próximos passos e darmos início ao seu projeto.</p>
+      <p>Para fechar, me envie pelo WhatsApp o <strong>nome completo e o CPF ou CNPJ</strong> do responsável. Eu preparo o contrato no mesmo dia e o projeto começa assim que o sinal for confirmado.</p>
       <div class="validade">Proposta válida por 7 dias a partir da data de envio.</div>
     </div>
   </div>
